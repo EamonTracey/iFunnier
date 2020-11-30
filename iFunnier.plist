@@ -1,0 +1,4 @@
+{ Filter = { Bundles = (
+    "ru.flysoft.ifunny",
+    "com.apple.springboard"
+); }; }

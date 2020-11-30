@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+
+		<dict>
+	  		<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>iFunnier</string>
+			<key>footerText</key>
+			<string>iFunny restart required</string>
+	  	</dict>
+	  	<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>cellClass</key>
+			<string>IFPSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.eamontracey.ifunnierpreferences</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>icon</key>
+			<string>icon.png</string>
+			<key>PostNotification</key>
+			<string>com.eamontracey.ifunnierpreferences/saved</string>
+		</dict>
+
+		<dict>
+	  		<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Ads</string>
+	  	</dict>
+	  	<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>cellClass</key>
+			<string>IFPSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.eamontracey.ifunnierpreferences</string>
+			<key>key</key>
+			<string>blockAds</string>
+			<key>label</key>
+			<string>Block Ads</string>
+			<key>PostNotification</key>
+			<string>com.eamontracey.ifunnierpreferences/saved</string>
+		</dict>
+
+		<dict>
+	  		<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Saving</string>
+	  	</dict>
+	  	<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>cellClass</key>
+			<string>IFPSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.eamontracey.ifunnierpreferences</string>
+			<key>key</key>
+			<string>removeWatermarks</string>
+			<key>label</key>
+			<string>Remove Watermarks</string>
+			<key>PostNotification</key>
+			<string>com.eamontracey.ifunnierpreferences/saved</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>cellClass</key>
+			<string>IFPSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.eamontracey.ifunnierpreferences</string>
+			<key>key</key>
+			<string>saveAnyContent</string>
+			<key>label</key>
+			<string>Save Any Content</string>
+			<key>PostNotification</key>
+			<string>com.eamontracey.ifunnierpreferences/saved</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Misc</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.eamontracey.ifunnierpreferences</string>
+			<key>action</key>
+			<string>copyBearerToken</string>
+			<key>icon</key>
+			<string>token.png</string>
+			<key>label</key>
+			<string>Copy Bearer Token</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.eamontracey.ifunnierpreferences</string>
+			<key>action</key>
+			<string>uninstalliFunny</string>
+			<key>icon</key>
+			<string>ifunny.png</string>
+			<key>cellClass</key>
+			<string>IFPUninstallButtonCell</string>
+			<key>label</key>
+			<string>Uninstall iFunny</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Social</string>
+			<key>footerText</key>
+			<string>© Eamon Tracey 2020</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>github</string>
+			<key>icon</key>
+			<string>github.png</string>
+			<key>label</key>
+			<string>Source Code  ❤️</string>
+		</dict>
+
+	</array>
+	<key>title</key>
+	<string>iFunnier</string>
+</dict>
+</plist>
