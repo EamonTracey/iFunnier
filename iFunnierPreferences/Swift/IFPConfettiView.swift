@@ -1,7 +1,7 @@
 import UIKit
 import QuartzCore
 
-public class ConfettiView: UIView {
+public class IFPConfettiView: UIView {
 
     var emitter: CAEmitterLayer!
     public var colors: [UIColor]!

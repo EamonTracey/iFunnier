@@ -36,7 +36,7 @@
 
 	[super viewDidLoad];
 
-	[self setConfettiView:[[ConfettiView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2, 0, 0, 0)]];
+	[self setConfettiView:[[IFPConfettiView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2, 0, 0, 0)]];
 	[[self view] addSubview:[self confettiView]];
 	[self setAudioPlayer:[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:@"/Library/PreferenceBundles/iFunnierPreferences.bundle/fanfare.wav"] error:nil]];
 

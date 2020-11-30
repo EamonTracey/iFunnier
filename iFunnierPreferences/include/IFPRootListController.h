@@ -4,7 +4,7 @@
 #import "iFunnierPreferences-Swift.h"
 
 @interface IFPRootListController: PSListController
-@property ConfettiView *confettiView;
+@property IFPConfettiView *confettiView;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @end
 
