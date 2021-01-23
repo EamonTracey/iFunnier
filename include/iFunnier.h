@@ -1,4 +1,5 @@
 #import <Photos/Photos.h>
+#import <UIKit/UIKit.h>
 
 //--Preferences--//
 BOOL enabled;
