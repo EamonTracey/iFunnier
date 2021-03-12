@@ -1,6 +1,6 @@
 Package: com.eamontracey.ifunnier
 Name: iFunnier
-Version: 1.1
+Version: 1.2
 Architecture: iphoneos-arm
 Description: Block ads, save any content (no watermark), and more on iFunny!
 Maintainer: Eamon Tracey
