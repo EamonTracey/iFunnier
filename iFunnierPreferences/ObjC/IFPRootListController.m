@@ -3,24 +3,19 @@
 @implementation IFPRootListController
 
 - (NSArray *)specifiers {
-
 	if (!_specifiers) {
 		_specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
 	}
 	return _specifiers;
-
 }
 
 - (id)readPreferenceValue:(PSSpecifier*)specifier {
-
 	NSString *path = [NSString stringWithFormat:@"/User/Library/Preferences/%@.plist", specifier.properties[@"defaults"]];
 	NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:path];
 	return (settings[specifier.properties[@"key"]]) ?: specifier.properties[@"default"];
-
 }
 
 - (void)setPreferenceValue:(id)value specifier:(PSSpecifier*)specifier {
-
 	NSString *path = [NSString stringWithFormat:@"/User/Library/Preferences/%@.plist", specifier.properties[@"defaults"]];
 	NSMutableDictionary *settings = [NSMutableDictionary dictionaryWithContentsOfFile:path];
 	[settings setObject:value forKey:specifier.properties[@"key"]];
@@ -29,21 +24,16 @@
 	if (notificationName) {
 		CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), notificationName, NULL, NULL, YES);
 	}
-
 }
 
 - (void)viewDidLoad {
-
 	[super viewDidLoad];
-
 	[self setConfettiView:[[IFPConfettiView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2, 0, 0, 0)]];
 	[[self view] addSubview:[self confettiView]];
 	[self setAudioPlayer:[[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:@"/Library/PreferenceBundles/iFunnierPreferences.bundle/fanfare.wav"] error:nil]];
-
 }
 
 - (void)copyBearerToken {
-
 	// This is quite inefficient, but my best strategy without acquiring root
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSArray *applicationDirectories = [fileManager contentsOfDirectoryAtPath:@"/var/mobile/Containers/Data/Application/" error:nil];
@@ -62,11 +52,9 @@
 	UIAlertAction *okayAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDestructive handler:nil];
 	[alert addAction:okayAction];
 	[self presentViewController:alert animated:YES completion:nil];
-
 }
 
 - (void)uninstalliFunny {
-
 	UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Would you really like to uninstall iFunny?" message:@"Please say yes!" preferredStyle:UIAlertControllerStyleAlert];
 	UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
 		[[NSDistributedNotificationCenter defaultCenter] postNotificationName:@"com.eamontracey.ifunnier/uninstallifunny" object:nil userInfo:nil];
@@ -80,13 +68,10 @@
 	[alert addAction:yesAction];
 	[alert addAction:noAction];
 	[self presentViewController:alert animated:YES completion:nil];
-
 }
 
 - (void)github {
-	
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/EamonTracey/iFunnier"] options:@{} completionHandler:nil];
-
 }
 
 @end

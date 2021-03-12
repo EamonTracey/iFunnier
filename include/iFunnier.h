@@ -1,19 +1,18 @@
 #import <Photos/Photos.h>
 #import <UIKit/UIKit.h>
 
-//--Preferences--//
+// Preferences
 BOOL enabled;
 BOOL blockAds;
 BOOL removeWatermarks;
 BOOL saveAnyContent;
-//----//
 
-@interface FNROContent
-@property NSString *url;
+@interface IFFeedCell
+@property NSData *contentData;
 @end
 
 @interface IFFeedViewController
-@property FNROContent *content;
+@property IFFeedCell *activeCell;
 @end
 
 @interface IFAdViewcontroller
@@ -22,26 +21,13 @@ BOOL saveAnyContent;
 
 @interface FNApplicationController
 @property IFAdViewcontroller *adViewController;
++ (instancetype)instance;
 @end
 
-@interface FNActivityView
-@property FNApplicationController *applicationController;
-- (void)close;
-- (void)ifunnier_saveActiveContent;
-@end
-
-@interface FNActivityItem
-@property NSString *accessebilityId;
-@end
-
-@interface FNActivityButton
-@property FNActivityItem *activityItem;
+@interface FCSaveToGalleryActivity: UIActivity
+- (void)saveToGaleryEndedWithError:(NSError *)error;
 @end
 
 @interface IFNetworkClientImpl
 - (NSString *)authorizationHeader;
-@end
-
-@interface NSObject (Swift)
-- (instancetype)initWithActionType:(int)type;
 @end
